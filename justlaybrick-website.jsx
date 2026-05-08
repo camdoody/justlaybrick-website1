@@ -419,6 +419,8 @@ const PortcosPage = ({ setCurrentPage }) => {
 
     // Fund II
     { num: 54, name: 'Retina Robotics', desc: 'vision for warehouses', date: '4.26', fund: 'Fund II', url: 'https://retinarobotics.com/' },
+    { num: 55, name: 'Unvale', desc: 'the creator platform for story development', date: '4.26', fund: 'Fund II', url: 'https://unvale.com/' },
+    { num: 56, name: 'Hilt', desc: 'data movement governance', date: '5.26', fund: 'Fund II', url: 'https://hilt.com/' },
   ];
 
   let currentFund = '';
@@ -910,124 +912,55 @@ const YardPage = () => {
 };
 
 const OurTypePage = () => {
+  const traits = [
+    'Highly opinionated',
+    'Non-obvious vision',
+    'High agency',
+    'Heads down',
+    'Junkyard grit',
+    'Delusional optimism',
+    'No vanity',
+    'Learning machines',
+    'CEO can sell',
+    '9-9-6',
+    'Hate to lose',
+    'Leeroy Jenkins',
+  ];
+
   return (
     <div style={{ maxWidth: '900px', margin: '0 auto', padding: '60px 40px' }}>
-      <h1 style={{
-        fontSize: '48px',
-        fontWeight: '900',
-        marginBottom: '20px',
-        textTransform: 'uppercase',
-        letterSpacing: '-0.02em'
-      }}>
-        Our Type
-      </h1>
-
-      <p style={{
-        fontSize: '20px',
-        color: '#F7931E',
-        marginBottom: '60px',
-        fontStyle: 'italic',
-        fontFamily: 'Georgia, serif'
-      }}>
-        We invest in junkyard dogs.
-      </p>
-
-      <div style={{
-        fontSize: '16px',
-        lineHeight: '1.8',
-        color: '#cccccc'
-      }}>
-        <p style={{ marginBottom: '40px' }}>
-          Brickyard isn't for everyone. We're looking for a specific type of founder—one who's willing to burn the ships and go all-in.
-        </p>
-
-        <div style={{
-          display: 'grid',
-          gap: '30px',
-          marginBottom: '60px'
-        }}>
-          <TraitCard 
-            title="All-in"
-            description="Burn the ships. You're not keeping one foot in your old life. Moving to Chattanooga isn't a trial—it's a commitment to focus."
-          />
-          <TraitCard 
-            title="Possessed"
-            description="Only one thing on your mind. You eat, sleep, and breathe your company. Nothing else matters until you hit PMF."
-          />
-          <TraitCard 
-            title="Capital Efficient"
-            description="Lean and mean until product-market fit. You know how to do more with less, and you're scrappy as hell."
-          />
-          <TraitCard 
-            title="Competitive"
-            description="Keep-up or leave culture. You thrive in competition. Being surrounded by other intense founders pushes you harder."
-          />
-          <TraitCard 
-            title="Competent"
-            description="Technical and complete co-founding teams. You can build what you're selling, and your team is battle-tested."
-          />
-          <TraitCard 
-            title="High Agency"
-            description="No hand-holding. You figure shit out. You don't wait for permission or instructions—you execute."
-          />
-          <TraitCard 
-            title="Non-consensus"
-            description="We attract counter-culture founders. You're building something people don't understand yet. You're comfortable being contrarian."
-          />
-          <TraitCard 
-            title="It-Factor"
-            description="Would die before giving up. This isn't a side project or a resume builder. This is your life's work, and failure isn't an option."
-          />
-        </div>
-
-        <div style={{
-          background: '#0a0a0a',
-          border: '2px solid #F7931E',
-          padding: '40px',
-          textAlign: 'center'
-        }}>
-          <p style={{
-            fontSize: '18px',
+      <div style={{ marginBottom: '60px' }}>
+        {traits.map((trait, i) => (
+          <div key={i} style={{
+            fontSize: '32px',
             fontWeight: '700',
-            color: '#F7931E',
-            margin: 0,
-            lineHeight: '1.6'
+            color: '#ffffff',
+            padding: '20px 0',
+            borderBottom: '1px solid #1a1a1a',
+            letterSpacing: '-0.01em'
           }}>
-            If this resonates, we want to meet you. If it sounds insane, Brickyard probably isn't for you—and that's ok.
-          </p>
-        </div>
+            {trait}
+          </div>
+        ))}
       </div>
-    </div>
-  );
-};
 
-const TraitCard = ({ title, description }) => {
-  return (
-    <div style={{
-      background: '#0a0a0a',
-      border: '1px solid #1a1a1a',
-      borderLeft: '3px solid #F7931E',
-      padding: '28px 32px',
-      transition: 'all 0.3s ease'
-    }}>
-      <h3 style={{
-        fontSize: '20px',
-        fontWeight: '700',
-        color: '#ffffff',
-        marginBottom: '12px',
-        textTransform: 'uppercase',
-        letterSpacing: '0.05em'
-      }}>
-        {title}
-      </h3>
-      <p style={{
-        fontSize: '15px',
-        color: '#999999',
-        margin: 0,
-        lineHeight: '1.7'
-      }}>
-        {description}
-      </p>
+      <div style={{ marginTop: '60px' }}>
+        <p style={{
+          fontSize: '20px',
+          fontWeight: '700',
+          color: '#cccccc',
+          marginBottom: '16px'
+        }}>
+          Growth rounds are about working smart.
+        </p>
+        <p style={{
+          fontSize: '20px',
+          fontWeight: '700',
+          color: '#F7931E'
+        }}>
+          The Series A is willed into existence.
+        </p>
+      </div>
     </div>
   );
 };

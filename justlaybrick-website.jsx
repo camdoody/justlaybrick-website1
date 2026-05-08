@@ -52,8 +52,8 @@ const BrickyardWebsite = () => {
         }}>
           {/* Logo */}
           <img 
-            src="brickyard-logo.png" 
-            alt="Brickyard" 
+            src="/brickyard-logo.png"
+            alt="Brickyard"
             style={{
               height: '40px',
               cursor: 'pointer'
@@ -217,7 +217,7 @@ const HomePage = ({ setCurrentPage }) => {
 
       <div style={{ position: 'relative', zIndex: 1, maxWidth: '900px' }}>
         <img
-          src="trough-of-sorrow.png"
+          src="/trough-of-sorrow.png"
           alt="Trough of Sorrow"
           style={{
             width: '100%',

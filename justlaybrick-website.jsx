@@ -179,6 +179,7 @@ const BrickyardWebsite = () => {
           .mobile-menu-button { display: block !important; }
         }
         body { margin: 0; }
+        .brickyard-enter-btn:hover { opacity: 0.8; }
       `}</style>
     </div>
   );
@@ -219,17 +220,21 @@ const HomePage = ({ setCurrentPage }) => {
 
       <button
         onClick={() => setCurrentPage('about')}
+        className="brickyard-enter-btn"
         style={{
-          padding: '14px 56px',
-          background: '#F7931E',
-          border: 'none',
+          padding: '0.4em 1.1em',
+          minHeight: '2.5em',
+          background: '#fafafa',
+          border: '1px solid #fafafa',
+          borderRadius: '300px',
           color: '#000000',
-          fontSize: '13px',
-          fontWeight: '600',
-          textTransform: 'uppercase',
-          letterSpacing: '0.2em',
+          fontSize: '17px',
+          fontWeight: '500',
+          letterSpacing: '0.02em',
           cursor: 'pointer',
-          fontFamily: 'inherit'
+          fontFamily: 'inherit',
+          lineHeight: 'normal',
+          transition: 'opacity 0.1s linear'
         }}
       >
         enter
